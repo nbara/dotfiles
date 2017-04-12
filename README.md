@@ -1,6 +1,6 @@
-# Mathias’s dotfiles
+# nbara's dotfiles
 
-![Screenshot of my shell prompt](https://i.imgur.com/EkEtphC.png)
+Fork from [Mathias Bynens' dotfiles](https://github.com/mathiasbynens/dotfiles/), with less settings and with default zsh shell (using zplug)
 
 ## Installation
 
@@ -25,16 +25,6 @@ Alternatively, to update while avoiding the confirmation prompt:
 ```bash
 set -- -f; source bootstrap.sh
 ```
-
-### Git-free install
-
-To install these dotfiles without Git:
-
-```bash
-cd; curl -#L https://github.com/mathiasbynens/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,.osx,LICENSE-MIT.txt}
-```
-
-To update later on, just run that command again.
 
 ### Specify the `$PATH`
 
