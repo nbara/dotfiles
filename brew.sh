@@ -111,6 +111,7 @@ brew cask install betterzipql --force
 
 # Programs that I use a lot
 brew cask install 1password
+brew cask install apptivate
 brew cask install atom
 brew cask install audacity
 brew cask install cakebrew
