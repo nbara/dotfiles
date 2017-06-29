@@ -23,6 +23,10 @@ alias work='cd ~/Dropbox/Work/ENS'
 alias zshconfig='open ~/.zshrc'
 alias BREWERY='brew update; brew upgrade `brew outdated`; brew cleanup'
 alias SERPENT='conda update conda; conda update anaconda; conda clean -tp'
+alias mountcortex='sshfs -o defer_permissions nicolas@192.168.1.103:/ ~/cortex/'
+alias unmountcortex='sudo diskutil umount force ~/cortex/'
+alias showinvisible='defaults write com.apple.finder AppleShowAllFiles TRUE'
+alias hideinvisible='defaults write com.apple.finder AppleShowAllFiles FALSE'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
