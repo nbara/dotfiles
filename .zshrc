@@ -30,12 +30,6 @@ zplugs=()
 autoload colors && colors
 setopt prompt_subst
 
-zplug "junegunn/fzf-bin", \
-    from:gh-r, \
-    as:command, \
-    rename-to:fzf, \
-    use:"*darwin*amd64*"
-
 zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]", defer:2
 zplug "plugins/colorize", from:oh-my-zsh
