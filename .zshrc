@@ -12,7 +12,13 @@ source ~/.zplug/init.zsh
 # PATHS
 ###############
 export ZSH=$HOME/.zplug/repos/robbyrussell/oh-my-zsh
-export PATH=/Users/nicolas/anaconda/bin:/Users/nicolas/bin:/usr/local/bin:${PATH}
+#export PATH=/Users/nicolas/bin:/usr/local/bin:${PATH}
+export PATH=/Users/nicolas/.zplug/repos/zplug/zplug/bin:/Users/nicolas/.zplug/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export ETS_TOOLKIT="qt4"
+
+# Anaconda
+. /Users/nicolas/anaconda3/etc/profile.d/conda.sh
+conda activate py3
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -30,7 +36,7 @@ zplugs=()
 autoload colors && colors
 setopt prompt_subst
 
-zplug "plugins/git",   from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]", defer:2
 zplug "plugins/colorize", from:oh-my-zsh
 zplug "zsh-users/zsh-completions", defer:2

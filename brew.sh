@@ -81,7 +81,6 @@ brew install gmp
 
 # Install other useful binaries.
 brew install ack
-#brew install exiv2
 brew install git
 brew install git-lfs
 brew install imagemagick --with-webp
@@ -125,7 +124,6 @@ brew cask install iterm2
 brew cask install latexit
 brew cask install keka
 brew cask install namechanger
-brew cask install malwarebytes-anti-malware
 brew cask install sabnzbd
 brew cask install skype
 brew cask install teamviewer
