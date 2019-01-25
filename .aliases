@@ -9,16 +9,17 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
+alias g="git"
+alias h="history"
+alias j="jobs"
 alias dotfiles="cd ~/dotfiles"
 alias db="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias g="git"
-alias h="history"
-alias j="jobs"
 alias eeg='cd ~/Dropbox/Work/ENS/EEG-analysis'
-alias dgt='cd ~/Dropbox/Work/ENS/DIGITRACK'
+alias blocks='cd ~/Dropbox/Work/ENS/EEG-blocks'
 alias bci='cd ~/Dropbox/Work/ENS/BCI'
+alias api='cd ~/Dropbox/Work/ENS/API'
 alias tb='cd ~/Toolboxes/'
 alias work='cd ~/Dropbox/Work/ENS'
 alias zshconfig='open ~/.zshrc'
@@ -27,9 +28,11 @@ alias hideinvisible='defaults write com.apple.finder AppleShowAllFiles FALSE'
 alias BREWERY='brew update; brew upgrade `brew outdated`; brew cleanup'
 alias SERPENT='conda update conda; conda update anaconda; conda clean -tp'
 alias cortexmount='sshfs -o defer_permissions nicolas@192.168.1.103:/ ~/cortex/'
+alias cortexmount_out='sshfs -oport=10103 -o defer_permissions nicolas@90.63.252.134:/ ~/cortex/'
 alias cortexunmount='sudo diskutil umount force ~/cortex/'
 alias cortexforceunmount='umount -f /Users/nicolas/cortex/'
 alias cortexeeg='cd ~/cortex/home/nicolas/Desktop/EEG-analysis/'
+alias cortexmw='cd ~/cortex/home/nicolas/Desktop/Mindwandering/'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
