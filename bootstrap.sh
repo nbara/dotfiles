@@ -7,12 +7,15 @@ git pull origin master;
 function doIt() {
 	rsync --exclude ".git/" \
         --exclude "init/" \
+		--exclude "mpv/" \
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
+		--exclude "brew.sh" \
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
+	rsync -avh --no-perms ./mpv ~/.config;
 	source ~/.bash_profile;
 }
 

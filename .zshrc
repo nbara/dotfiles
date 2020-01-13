@@ -14,11 +14,20 @@ source ~/.zplug/init.zsh
 export ZSH=$HOME/.zplug/repos/robbyrussell/oh-my-zsh
 #export PATH=/Users/nicolas/bin:/usr/local/bin:${PATH}
 export PATH=/Users/nicolas/.zplug/repos/zplug/zplug/bin:/Users/nicolas/.zplug/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-export ETS_TOOLKIT="qt4"
 
-# Anaconda
-. /Users/nicolas/anaconda3/etc/profile.d/conda.sh
-conda activate py3
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/nicolas/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/nicolas/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/nicolas/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/nicolas/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
