@@ -823,12 +823,18 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
 
 ###############################################################################
+# Hammerspoon                                                                 #
+###############################################################################
+
+defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/Dropbox/Apps/hammerspoon/init.lua"
+
+###############################################################################
 # Transmission.app                                                            #
 ###############################################################################
 
 # Use `~/Downloads/incomplete` to store incomplete downloads
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Documents/Torrents"
+defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Documents/incomplete"
 
 # Use `~/Downloads/Torrents` to store completed downloads
 defaults write org.m0k.transmission DownloadLocationConstant -bool true
@@ -869,7 +875,6 @@ for app in "Activity Monitor" \
 	"Contacts" \
 	"Dock" \
 	"Finder" \
-	"Google Chrome Canary" \
 	"Google Chrome" \
 	"Mail" \
 	"Messages" \
